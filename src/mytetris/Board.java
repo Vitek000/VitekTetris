@@ -62,14 +62,14 @@ public class Board
 
     private void paintField(Graphics g)
     {
-        int i=0;
-        for(boolean[] boolX : field)
+        int i = 0;
+        for (boolean[] boolX : field)
         {
-            int j=0;
-            for(boolean xy : boolX)
+            int j = 0;
+            for (boolean xy : boolX)
             {
-                if(xy)
-                    g.fillRect(offsetY + j* CELL_SIZE, offsetX + i*CELL_SIZE, CELL_SIZE, CELL_SIZE);
+                if (xy)
+                    g.fillRect(offsetY + j * CELL_SIZE, offsetX + i * CELL_SIZE, CELL_SIZE, CELL_SIZE);
 
                 j++;
             }
@@ -116,12 +116,13 @@ public class Board
 
     /**
      * Установка следа на карте
+     *
      * @param shape
      * @param g
      */
     private void setShapeFootPrint(Shape shape, Graphics g)
     {
-        for(Point p : shape.points)
+        for (Point p : shape.points)
         {
             Point globalPoint = TetrisHelper.makeGlobalPoint(shape.getLocation(), p);
             field[globalPoint.getY()][globalPoint.getX()] = true;
@@ -134,11 +135,10 @@ public class Board
 
     public void processCurrentShape(Graphics g)
     {
-        if(canNotMoveDown())
+        if (canNotMoveDown())
         {
             placeNewShape(g);
-        }
-        else
+        } else
         {
             moveShapeDown();
         }
@@ -163,10 +163,10 @@ public class Board
 
     private void movingHorizontally()
     {
-        if(movingLeft)
+        if (movingLeft)
             currentShape.moveLeft();
 
-        if(movingRight)
+        if (movingRight)
             currentShape.moveRight();
 
         clearMovingHorizontallyFlags();
