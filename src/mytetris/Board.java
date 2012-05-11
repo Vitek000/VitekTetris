@@ -25,7 +25,6 @@ public class Board
 
     private Shape currentShape = null;
 
-
     public boolean isMovingLeft()
     {
         return movingLeft;
