@@ -126,13 +126,14 @@ public class Shape
 
     /**
      * ѕолучение начальной случайной фигуры
+     *
      * @return
      */
     public static Shape getRandomDefaultShape()
     {
         return new Shape(defaultShapes.get(new Random().nextInt(defaultShapes.size())));
     }
-    
+
     public void moveLeft()
     {
         Location previous = location;
@@ -140,7 +141,7 @@ public class Shape
         Location newLocation = new Location(newX, location.getY());
         setLocation(newLocation);
 
-        if(previous.getX() != newLocation.getX() + 1)
+        if (previous.getX() != newLocation.getX() + 1)
         {
             System.out.println("LEFT: was " + previous + " , new " + newLocation);
         }

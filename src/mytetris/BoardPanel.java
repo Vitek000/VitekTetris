@@ -15,8 +15,6 @@ public class BoardPanel extends JPanel
     private Board board = new Board();
 
 
-
-
     @Override
     public void paint(Graphics g)
     {

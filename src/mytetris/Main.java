@@ -14,9 +14,9 @@ public class Main
 {
     public static volatile AtomicBoolean gameOver = new AtomicBoolean(false);
     public static final int TICK = 100;
-    
+
     public static int round = 0;
-    
+
     public static void main(String[] args) throws InterruptedException
     {
         MainFrame mainFrame = new MainFrame();
@@ -31,7 +31,7 @@ public class Main
             System.out.println("round =  " + round);
             Thread.sleep(TICK);
 
-            if(mainFrame.checkGameOver())
+            if (mainFrame.checkGameOver())
             {
                 break;
             }

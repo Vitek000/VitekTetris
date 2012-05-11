@@ -45,9 +45,9 @@ public class MainFrame extends JFrame implements KeyListener
     public void keyPressed(KeyEvent e)
     {
         System.out.println("PRESSED!!!!");
-        if(e.getKeyCode() == 37)
+        if (e.getKeyCode() == 37)
             boardPanel.moveLeft();
-        else if(e.getKeyCode() == 39)
+        else if (e.getKeyCode() == 39)
             boardPanel.moveRight();
     }
 
