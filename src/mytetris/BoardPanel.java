@@ -15,6 +15,10 @@ public class BoardPanel extends JPanel
     private Board board = new Board();
 
 
+    /**
+     * Рисование панели с доской
+     * @param g
+     */
     @Override
     public void paint(Graphics g)
     {
