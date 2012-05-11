@@ -10,21 +10,21 @@ package mytetris;
 public class TetrisHelper
 {
     static boolean[][] testArray =
-    {
-        {true, false, true, true},
-        {true, true, true, true},
-        {false, false, false, false}
-    };
+            {
+                    {true, false, true, true},
+                    {true, true, true, true},
+                    {false, false, false, false}
+            };
 
     public static void printBoolean2DimensionArray(boolean[][] bool)
     {
         testArray[2][1] = true;
 
-        int i=0;
-        for(boolean[] a1 : bool)
+        int i = 0;
+        for (boolean[] a1 : bool)
         {
-            int j=0;
-            for(boolean a2 : a1)
+            int j = 0;
+            for (boolean a2 : a1)
             {
                 j++;
                 System.out.print(a2 + " " + (i) + ":" + (j) + (a2 ? "   " : "  "));
@@ -41,11 +41,11 @@ public class TetrisHelper
 
     public static boolean isWallNextDown(Shape currentShape, boolean[][] bool)
     {
-        for(Point point : currentShape.points) 
+        for (Point point : currentShape.points)
         {
             Point globalPoint = makeGlobalPoint(currentShape.getLocation(), point);
             int checkY = Math.min(globalPoint.getY() + 1, Board.HEIGHT - 1);
-            if(bool[checkY][globalPoint.getX()])
+            if (bool[checkY][globalPoint.getX()])
                 return true;
         }
         return false;
