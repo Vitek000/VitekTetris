@@ -14,17 +14,46 @@ import java.awt.Graphics;
  */
 public class Board
 {
+    /**
+     * Ширина доски (в ячейках)
+     */
     static final int WIDTH = 60;
+
+    /**
+     * Высота доски (в ячейках)
+     */
     static final int HEIGHT = 60;
+
+    /**
+     * Размер ячейки (в пикселях)
+     */
     static final int CELL_SIZE = 10;
 
+    /**
+     * Отступ по горизонтали (отчтуп делается когда рисуем сетку)
+     */
     static final int offsetX = 5;
+
+    /**
+     Отступ по вертикали (отчтуп делается когда рисуем сетку)
+     */
     static final int offsetY = 5;
 
+    /**
+     * Поле
+     */
     private boolean[][] field = new boolean[HEIGHT][WIDTH];
 
+    /**
+     * Текущая фигура
+     */
     private Shape currentShape = null;
 
+
+    /**
+     *
+     * @return
+     */
     public boolean isMovingLeft()
     {
         return movingLeft;
